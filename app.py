@@ -5,11 +5,10 @@ from bson.objectid import ObjectId
 
 app = Flask(__name__)
 
-
+mongo = PyMongo(app)
 
 @app.route('/')
-def hello():
-    return 'hello world'
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
